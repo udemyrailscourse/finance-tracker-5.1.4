@@ -19,8 +19,10 @@
             <i class="fa fa-user"></i>
             <%= current_user.full_name.present? ? current_user.full_name : current_user.email %>
           </li>
-          <li class="col-md-4 logout"><%= link_to("logout", destroy_user_session_path,
-          class: "btn btn-xs btn-danger", method: :delete) %></li>
+          <li class="col-md-4 logout">
+            <%= link_to("logout", destroy_user_session_path,
+                                class: "btn btn-xs btn-danger", method: :delete) %>
+          </li>
         </ul>
       </div>
     <% end %>
